@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Travel Agent</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dube Travels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to Your Independent Travel Agency</h1>
+        <p class="lead text-center">Personalized one on one travel planning services to make your vacation dreams come true.</p>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{ url_for('static', filename='images/travelPick2.jpg') }}" class="img-fluid" alt="Travel" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="col-sm-4">
+                <img src="{{ url_for('static', filename='images/travelPick1.jpg') }}" class="img-fluid" alt="Travel" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="col-sm-4">
+                <img src="{{ url_for('static', filename='images/travelPick3.webp') }}" class="img-fluid" alt="Travel" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container mt-5" align="center">
+        <h1>Why choose a travel agent? Why not just book online?</h1>
+    </div>
+    <br/>
+    <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Expertise and Personalized Service
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Travel agents are professionals with extensive knowledge of destinations, travel routes, and the best times to visit various locations. They stay updated on travel trends, safety protocols, and destination-specific details that you might miss when booking online. Travel agents take the time to understand your preferences, interests, and budget. They tailor recommendations and itineraries to suit your specific needs, ensuring a more enjoyable and stress-free vacation.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Time and Stress Savings
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Planning a trip can be time-consuming and overwhelming, especially with the vast amount of information available online. A travel agent handles all the details, from booking flights and accommodations to arranging tours and activities, saving you hours of research and comparison. In case of unexpected issues like flight cancellations, overbooked hotels, or lost luggage, travel agents act as your advocate. They have the resources and contacts to resolve problems quickly, ensuring minimal disruption to your plans.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Access to Exclusive Deals and Added Value
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Travel agents often have access to special deals, discounts, and packages that are not available to the general public. They can secure better rates and added perks, such as room upgrades, complimentary meals, and unique experiences. While there might be a perception that travel agents cost more, their ability to find the best deals and added value often outweighs any fees. They ensure you get the most for your budget, providing a higher return on your investment.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Safety and Peace of Mind
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        In today's world, safety is a top priority. Travel agents provide valuable advice on travel insurance, health precautions, and destination-specific safety guidelines. They ensure you are well-prepared and informed for your journey. Knowing that a knowledgeable professional is handling your travel arrangements gives you peace of mind. You can relax and enjoy your trip, confident that every detail has been expertly managed.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Building Long-Term Relationships
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Working with a travel agent allows you to build a relationship with someone who understands your travel preferences and needs. Over time, they can provide even more personalized and efficient service, making future travel planning even easier.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container mt-5">
+        <h2>Contact Me</h2>
+        <form action="/send_message" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            Chat with us!
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbot-conversation" style="max-height: 200px; overflow-y: auto;"></div>
+            <textarea id="chatbot-input" class="form-control" placeholder="Type your message..."></textarea>
+            <button id="chatbot-send" type="button" class="btn btn-success mt-2">Send</button>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('chatbot').addEventListener('click', function(event) {
+            if (event.target.closest('.chatbot-body') === null) {
+                this.classList.toggle('expanded');
+            }
+        });
+
+        document.querySelector('.chatbot-body').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        document.getElementById('chatbot-send').addEventListener('click', function() {
+            const userMessage = document.getElementById('chatbot-input').value;
+            if (userMessage.trim() !== "") {
+                displayMessage("You", userMessage);
+                document.getElementById('chatbot-input').value = "";
+                
+                fetch('/chat_assistant', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userMessage })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    displayMessage("Assistant", data.message);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        });
+
+        function displayMessage(sender, message) {
+            const conversation = document.getElementById('chatbot-conversation');
+            const messageElement = document.createElement('div');
+            messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            conversation.appendChild(messageElement);
+            conversation.scrollTop = conversation.scrollHeight;
+        }
+    </script>
+</body>
+</html>
