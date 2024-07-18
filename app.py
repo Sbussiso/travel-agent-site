@@ -11,11 +11,6 @@ load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
-client = OpenAI(
-    # This is the default and can be omitted
-    api_key=os.getenv('OPENAI_API_KEY'),
-)
-
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -66,22 +61,31 @@ def send_message_route():
 
     return redirect(url_for('index'))
 
+
 @app.route('/chat_assistant', methods=['POST'])
 def chat_assistant_route():
     user_message = request.json.get("message")
-    
-    response = client.chat.completions.create(
+
+    client = OpenAI(
+        # This is the default and can be omitted
+        api_key = os.getenv('OPENAI_API_KEY')
+    )
+
+    chat_completion = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
-                "content": user_message,
+                "content": "Hello there",
             }
         ],
         model="gpt-3.5-turbo",
     )
 
-    assistant_message = response['choices'][0]['message']['content']
+    # Access the content using the 'message' attribute of the Choice object
+    assistant_message = chat_completion.choices[0].message.content
+    print(assistant_message)
     return jsonify({"message": assistant_message})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
