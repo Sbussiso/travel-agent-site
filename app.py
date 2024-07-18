@@ -75,7 +75,7 @@ def chat_assistant_route():
         messages=[
             {
                 "role": "user",
-                "content": "Hello there",
+                "content": user_message,
             }
         ],
         model="gpt-3.5-turbo",

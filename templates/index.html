@@ -172,7 +172,7 @@
             if (userMessage.trim() !== "") {
                 displayMessage("You", userMessage);
                 document.getElementById('chatbot-input').value = "";
-                
+
                 fetch('/chat_assistant', {
                     method: 'POST',
                     headers: {
@@ -182,7 +182,12 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    displayMessage("Assistant", data.message);
+                    console.log('Response data:', data);  // Log the response data for debugging
+                    if (data.message) {
+                        displayMessage("Assistant", data.message);
+                    } else {
+                        console.error('No message in response:', data);
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -191,6 +196,7 @@
         });
 
         function displayMessage(sender, message) {
+            console.log('Displaying message:', message);  // Log the message to be displayed for debugging
             const conversation = document.getElementById('chatbot-conversation');
             const messageElement = document.createElement('div');
             messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
