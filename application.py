@@ -9,18 +9,18 @@ import os
 
 load_dotenv()
 
-app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY')
+application = Flask(__name__)
+application.secret_key = os.getenv('SECRET_KEY')
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/send_message', methods=['POST'])
+@application.route('/send_message', methods=['POST'])
 def send_message_route():
     name = request.form.get("name")
     email = request.form.get("email")
@@ -62,7 +62,7 @@ def send_message_route():
     return redirect(url_for('index'))
 
 
-@app.route('/chat_assistant', methods=['POST'])
+@application.route('/chat_assistant', methods=['POST'])
 def chat_assistant_route():
     user_message = request.json.get("message")
 
@@ -88,4 +88,4 @@ def chat_assistant_route():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
