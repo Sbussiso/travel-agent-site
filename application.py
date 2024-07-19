@@ -6,6 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import gunicorn
 
 load_dotenv()
 
